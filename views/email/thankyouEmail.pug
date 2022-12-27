@@ -1,0 +1,24 @@
+extends baseEmail
+
+block content
+  p Hi #{firstName},
+  p Your purchase is complete 🎉🙏
+  p Here is a summary of your purchase!
+  table.products(role='presentation' border='0' cellpadding='0' cellspacing='0')
+    thead
+      tr
+        th Product
+        th Quantity
+        th Price
+    tbody
+      each product in products
+        tr
+          td= product.productName
+          td= product.quantity  
+          td $#{product.price}
+      tr
+        td
+        td 
+        td Total: $#{totalPrice}
+  p Enjoy your new clothes
+  p - Telmo Sampaio, CEO
