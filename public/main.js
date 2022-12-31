@@ -3,7 +3,7 @@ let stage = 'prod';
 let products = [];
 
 async function getProducts() {
-	const host = stage === 'dev' ? 'http://localhost:5000' : 'https://telmo-shop.xyz'
+	const host = stage === 'dev' ? 'http://localhost:5000' : 'https://starfish-app-pln3n.ondigitalocean.app/'
     const response = await axios.get(`${host}/products`);
     console.log(response.data);
     products = response.data.products
